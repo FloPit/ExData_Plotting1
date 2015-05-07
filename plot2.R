@@ -18,10 +18,12 @@ TimeStamp <- strptime(x, "%d/%m/%Y %H:%M:%S")
 mydata  <- cbind(mydata, TimeStamp)
 
 
-#make the plot 1: 
+#make the plot 2: 
 #set output device to "png" file,
-#make histogram of global active power, set hist-parameters for layout
+#make plot of x=Timestamp, y=Global_active_power, set parameters for layout
+
+png(filename="plot2.png" ,width = 480, height = 480)
+plot(x=mydata$TimeStamp, y=mydata$Global_active_power, type="l", main="Global Active Power by Time", ylab="Global Active Power (kilowatts)", xlab="Please note: Do=Thursday, Fr=Friday, Sa=Saturday")
+
 #close device
-png(filename="plot1.png" ,width = 480, height = 480)
-hist(mydata$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", col="red")
 dev.off()
