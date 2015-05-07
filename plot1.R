@@ -15,7 +15,7 @@ mydata <- subset(data, Date=="1/2/2007" | Date=="2/2/2007")
 
 
 #make the plot: 
-#set device to png file,
+#set output device to "png" file,
 #make histogram of global active power, set hist-parameters for layout
 #close device
 png(filename="plot1.png" ,width = 480, height = 480)
